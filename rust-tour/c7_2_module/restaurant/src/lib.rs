@@ -24,6 +24,7 @@ mod back_of_house {
         seasonal_fruit: String,
     }
 
+    #[derive(Debug)]
     pub enum Appetizer {
         // enum is public by default
         Soup,
@@ -58,5 +59,6 @@ pub fn eat_at_restaurant() {
 
     // Access public fields
     back_of_house::Breakfast::summer("Rye");
-    back_of_house::Appetizer::Soup;
+    let soup = back_of_house::Appetizer::Soup;
+    println!("I'd like {:#?}!", soup);
 }
